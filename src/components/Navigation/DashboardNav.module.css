@@ -1,0 +1,10 @@
+@media (min-width: 800px) {
+  .nav-link-selected >div{ 
+    border-left: 2px solid #FF5403;
+  }
+}
+
+.nav-link-selected{
+  color: #FF5403;
+}
+
