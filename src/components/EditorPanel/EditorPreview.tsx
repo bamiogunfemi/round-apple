@@ -1,8 +1,12 @@
 import { Box, Button, Flex, Image, Stack, Text } from "@chakra-ui/react";
+import { useContext } from "react";
 import Ballon from "../../assets/images/ballon.png";
 import { socialLinks, userImage } from "../../constants";
-
+import { AppContext } from "../../context/AppContext";
+import { ImArrowUpRight2 } from "react-icons/im";
 export const EditorPreview = () => {
+  const { solidColor, links } = useContext(AppContext);
+
   return (
     <Box padding={16}>
       <Box
@@ -11,7 +15,7 @@ export const EditorPreview = () => {
         backgroundSize="120%, contain "
         backgroundRepeat={"no-repeat"}
         borderRadius={12}
-        backgroundColor="black"
+        backgroundColor="#131316"
         marginBottom={0}
         border={"1px solid #E5E8F0"}
         height={600}>
@@ -36,7 +40,7 @@ export const EditorPreview = () => {
               />
             </Flex>
 
-            <Box color={"white"} textAlign="center" backgroundColor="black">
+            <Box color={"white"} textAlign="center" backgroundColor={"#131316"}>
               <Text fontSize={24} fontWeight={600}>
                 Blessing Daniels
               </Text>
@@ -55,9 +59,38 @@ export const EditorPreview = () => {
                     borderRadius="full"
                     width={9}
                     height={9}
-                    backgroundColor="#1D1C2F">
+                    backgroundColor={solidColor}>
                     {icon}
                   </Flex>
+                ))}
+              </Flex>
+              <Flex
+                justifyContent={"center"}
+                flexDirection="column"
+                marginTop={2.5}>
+                {links.map(({ title, id, link }) => (
+                  <a href="link" rel="noreferrer" target="_blank">
+                    <Flex
+                      key={id}
+                      marginTop={3.5}
+                      marginRight={3}
+                      p={6}
+                      justifyContent={"space-between"}
+                      alignItems="center"
+                      borderRadius="full"
+                      width={"100%"}
+                      height={9}
+                      backgroundColor={solidColor}>
+                      <Text
+                        fontSize={"15px"}
+                        fontWeight={600}
+                        textTransform={"capitalize"}>
+                        {" "}
+                        {title}
+                      </Text>
+                      <ImArrowUpRight2 />
+                    </Flex>
+                  </a>
                 ))}
               </Flex>
             </Box>
@@ -68,6 +101,7 @@ export const EditorPreview = () => {
         fontSize={15}
         width="100%"
         marginTop={8}
+        color={"black"}
         marginBottom={3}
         borderRadius={100}
         backgroundColor="white"

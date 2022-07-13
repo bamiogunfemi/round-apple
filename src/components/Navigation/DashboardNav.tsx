@@ -61,7 +61,7 @@ export const SidebarNavigationBar = ({
                         direction={["column", "row"]}
                         justify="start"
                         w={["fit-content", "auto"]}
-                        align={["center", "start"]}
+                        align={["center"]}
                         mb={isLargerThan800 ? 0 : item.icon ? 6 : 4}>
                         {item?.icon && (
                           <Box

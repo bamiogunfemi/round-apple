@@ -4,7 +4,7 @@
   }
 }
 
-.nav-link-selected{
+.nav-link-selected, .nav-link-selected p{
   color: #FF5403;
 }
 

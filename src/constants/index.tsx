@@ -7,6 +7,26 @@ import {
 } from "react-icons/ai";
 import { RiDashboardLine, RiPencilLine, RiWallet2Line } from "react-icons/ri";
 import { MdPeopleOutline, MdCreditCard } from "react-icons/md";
+
+export const whiteColor = "#FFF";
+export const pickerColors = [
+  "#242429",
+  "#007AFF",
+  "#9c27b0",
+  "#673ab7",
+  "#3f51b5",
+  "#009688",
+  "#4caf50",
+  "#8bc34a",
+  "#cddc39",
+  "#ffeb3b",
+  "#ffc107",
+  "#ff9800",
+  "#ff5722",
+  "#795548",
+  "#607d8b",
+];
+
 export const socialLinks = [
   {
     icon: <AiOutlineInstagram size={16} fill="white" />,
